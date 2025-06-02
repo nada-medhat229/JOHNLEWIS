@@ -8,16 +8,19 @@
   }
 
   .subscribe {
+    border-bottom: 1px solid #141414;
     input {
-      border-right: none;
+      border: none !important;
       &:focus {
         box-shadow: none;
       }
     }
 
     button {
-      border-radius: 0;
-      font-weight: bold;
+      border-top-left-radius: 8px !important;
+     border-bottom-left-radius: 8px !important;
+      border-radius: 8px;
+      padding: 0 15px;
     }
   }
 
@@ -50,5 +53,11 @@
   }
   .dropdown-toggle::after {
     margin-left: 0.4rem;
+  }
+  .loowerfoorer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap:wrap;
   }
 }
