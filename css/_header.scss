@@ -1,0 +1,25 @@
+
+.responsive-header {
+  .header-logo {
+    height: 32px;
+    object-fit: contain;
+
+    @include media(768) {
+      height: 28px;
+    }
+  }
+
+  .header-icons {
+    .btn,
+    a {
+      padding: 0;
+      font-size: 1.25rem;
+
+      img {
+        height: 20px;
+      }
+
+      
+    }
+  }
+}

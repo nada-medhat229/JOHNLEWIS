@@ -1,152 +1,459 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JOHNLEWIS</title>
-    <link href="https://api.fontshare.com/v2/css?f[]=clash-grotesk@1&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./package/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JOHNLEWIS</title>
+  <link href="https://api.fontshare.com/v2/css?f[]=clash-grotesk@1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./package/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
-    <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
-   <main>
-    <div class="head ">
-        <p class="mb-0">New season coming!  Discount 10% for all product!  Checkout Now!   <span>20:40</span></p>
-     
-    </div>
-    <header class="container py-3">
-  <div class="d-flex justify-content-between align-items-center">
-    <!-- Logo -->
-   <img src="./images/logo.png" alt="logo">
+  <div class="head ">
+    <p class="mb-0">New season coming! Discount 10% for all product! Checkout Now! <span>20:40</span></p>
 
-    <!-- Right-side icons -->
-    <div class="d-flex align-items-center gap-3">
-      <!-- Search -->
-      <button class="btn btn-link p-0 text-dark">
-        <i class="bi bi-search fs-5"></i>
-      </button>
+  </div>
+  <header class="responsive-header container py-3">
+    <div class="d-flex justify-content-between align-items-center">
+      <!-- Logo -->
+      <img src="./images/logo.png" alt="logo" class="header-logo" />
 
-      <!-- Categories Dropdown -->
-      <div class="dropdown">
-        <button class="btn btn-link dropdown-toggle text-dark p-0" type="button" data-bs-toggle="dropdown">
-          Categories
+      <!-- Right-side icons -->
+      <div class="d-flex align-items-center gap-3 header-icons">
+        <!-- Search -->
+        <button class="btn btn-link px-2 text-dark">
+          <i class="bi bi-search fs-5"></i>
         </button>
-        <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#">Clothing</a></li>
-          <li><a class="dropdown-item" href="#">Home</a></li>
-        </ul>
+
+        <!-- Categories Dropdown (Desktop Only) -->
+        <div class="custom-dropdown d-none d-md-block text-black" data-selected="Categories">
+          <button class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+            <span class="text-black fw-medium fs-5">Categories</span>
+          </button>
+          <ul class="dropdown-menu">
+            <li><a href="#" data-value="Clothing">Clothing</a></li>
+            <li><a href="#" data-value="Home">Home</a></li>
+          </ul>
+        </div>
+
+        <!-- Sign In (Desktop Only) -->
+        <a href="#" class="text-decoration-none text-dark d-none d-md-flex align-items-center gap-1">
+          <i class="bi bi-person"></i> <span>Sign in</span>
+        </a>
+
+        <!-- Wishlist (Desktop Only) -->
+        <a href="#" class="text-dark d-none d-md-block px-2">
+          <img src="./images/heart.png" alt="heart" />
+        </a>
+
+        <!-- Cart -->
+        <a href="#" class="position-relative text-dark">
+          <img src="./images/cart.png" alt="cart" />
+          <span class="position-absolute top-0 start-100 translate-middle badge rounded-circle bg-dark text-white"
+            style="font-size: 0.6rem;">0</span>
+        </a>
+
+        <!-- Menu Icon (Mobile Only) -->
+        <button class="btn btn-link p-0 text-dark d-md-none px-2" data-bs-toggle="offcanvas"
+          data-bs-target="#mobileMenu" aria-controls="mobileMenu">
+          <i class="bi bi-list fs-5"></i>
+        </button>
+        <!-- Bootstrap Offcanvas Menu (Right) -->
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+          <div class="offcanvas-header">
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="list-unstyled">
+              <li><a href="#" class="d-block py-2 text-black">Home</a></li>
+              <li><a href="#" class="d-block py-2 text-black">Categories</a></li>
+              <li><a href="#" class="d-block py-2 text-black">Sign in</a></li>
+
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </header>
+  <main class="container">
+
+
+
+
+    <nav class="container" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#">Homepage</a></li>
+        <li class="breadcrumb-item"><a href="#">Women</a></li>
+        <li class="breadcrumb-item"><a href="#">Women's Shirts & Tops</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Long Sleeve Overshirt, Khaki, 6</li>
+      </ol>
+    </nav>
+    <div class="container py-5 product-detail">
+      <div class="row gy-4 justify-content-around">
+        <!-- Product Gallery -->
+        <div class="col-md-6">
+          <div class="position-relative text-center">
+            <img src="./images/image.png" alt="Main product" class="img-main">
+            <!-- Wishlist and Share -->
+            <div class="position-absolute top-0 end-0 d-flex flex-column gap-2 mt-2 me-2">
+              <button class="btn btn-light">
+                <img src="./images/share.png" alt="share" /></button>
+              <button class="btn btn-light"> <img src="./images/heart.png" alt="heart" /></button>
+            </div>
+          </div>
+          <!-- Thumbnail Gallery -->
+          <div class="d-flex justify-content-between mt-3 gap-2 overflow-auto">
+            <img src="./images/Frame139.png" class="thumb-img">
+            <img src="./images/image 19.png" class="thumb-img">
+            <img src="./images/image 20.png" class="thumb-img">
+            <img src="./images/Frame 144.png" class="thumb-img">
+            <img src="./images/Frame 143.png" class="thumb-img">
+          </div>
+        </div>
+
+        <!-- Product Info -->
+        <div class="col-md-5 ">
+          <p class="text-muted mb-1">John Lewis ANYDAY</p>
+          <h4 class="fw-semibold">Long Sleeve Overshirt, Khaki, 6</h4>
+
+          <!-- Pricing and Rating -->
+          <div class="d-flex align-items-center justify-content-between gap-3 mb-md-5 mb-1">
+            <div>
+              <del class="text-muted">£40.00</del>
+              <span class="fw-bold fs-5 text-dark">£28.00</span>
+            </div>
+            <div>
+              <span class="text-muted">1,238 Sold</span>
+              <span class=""><i class="bi bi-star-fill "></i> 4.5</span>
+
+            </div>
+          </div>
+    <hr class="hr-dashed d-flex d-sm-none " />
+
+          <!-- Description -->
+
+          <div class="mb-md-5 mb-1">
+            <h5 class="fw-semibold">Description:</h4>
+              <p class="text-muted">
+                Boba etiam ut bulla tea est potus dilectus singulari compositione saporum et textuum, quae in Taiwan
+                annis 1980 orta sunt. Boba refert ad pilas masticas tapiocas in fundo potus inventas, quae typice lacte
+                tea nigro sapiuntur. Boba phaenomenon.
+                <a href="#" class="fw-semibold text-black fs-6">See More...</a>
+              </p>
+          </div>
+
+          <!-- Color -->
+          <div class="mb-md-3 mb-1">
+            <p class="mb-md-3 mb-1 fw-semibold text-muted">
+              Color: <span class="text-black selected-color">Royal Brown</span>
+            </p>
+            <div class="d-flex gap-2">
+              <div class="color-box active" data-color="Royal Brown">
+                <span class="color-inner bg-brown "></span>
+              </div>
+              <div class="color-box" data-color="White Sand">
+                <span class="color-inner bg-light"></span>
+              </div>
+              <div class="color-box" data-color="Ocean Blue">
+                <span class="color-inner bg-semiblue"></span>
+              </div>
+              <div class="color-box" data-color="Jet Black">
+                <span class="color-inner bg-dark"></span>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- Sizes -->
+          <div class="mb-md-3 mb-1">
+            <div class="d-flex justify-content-between">
+              <p class="mb-md-3 fw-semibold text-muted">
+                Size: <span class="text-black selected-size">8</span>
+              </p>
+              <a href="#" class="ms-3 small fw-semibold text-black link-offset-2 text-decoration-underline">
+                View Size Chart
+              </a>
+            </div>
+
+            <div class="d-flex gap-2 flex-wrap">
+              <button class="btn fw-semibold size-box" data-size="6">6</button>
+              <button class="btn fw-semibold size-box active" data-size="8">8</button>
+              <button class="btn fw-semibold size-box" data-size="10">10</button>
+              <button class="btn fw-semibold size-box" data-size="14">14</button>
+              <button class="btn fw-semibold size-box" data-size="18">18</button>
+              <button class="btn fw-semibold size-box" data-size="20">20</button>
+            </div>
+          </div>
+
+
+          <!-- Buttons -->
+          <div class="d-flex flex-column flex-md-row gap-2 mb-md-3 mb-1">
+            <button class="btn btn-dark w-100 py-2 fs-5">Add To Cart</button>
+            <button class="btn btn-outline-dark w-100 py-2 fs-5">Checkout Now</button>
+          </div>
+
+          <a href="#" class="small text-muted text-decoration-underline">Delivery T&C</a>
+        </div>
+      </div>
+    </div>
+
+    <hr class="hr-dashed d-flex d-sm-none " />
+
+    <!-- related-products -->
+    <div class="related-products py-5">
+      <div class="container">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+          <h4 class="fw-semibold">Related Product</h4>
+          <a href="#" class="text-decoration-underline text-black ">View All</a>
+        </div>
+
+        <div class=" products-wrapper ">
+          <!-- Product Card -->
+          <div class="product-card p-2 text-start">
+            <img src="./images/Frame 203.png" class="img-fluid rounded mb-2" alt="product">
+            <h6 class="fw-medium mb-0 fs-md-5">Whistle</h6>
+            <p class="fw-medium mb-1  fs-5">$26</p>
+            <p class="text-muted  mb-1">Wide Leg Cropped Jeans, Denim</p>
+            <div class="d-flex align-items-center justify-content-between gap-1 text-muted ">
+              <span>
+                <i class="bi bi-star-fill"></i> 4.8
+              </span>
+              <span>• 1,238 Sold</span>
+            </div>
+          </div>
+          <div class="product-card p-2 text-start">
+            <img src="./images/Frame 202.png" class="img-fluid rounded mb-2" alt="product">
+            <h6 class="fw-medium mb-0 fs-md-5">John Lewis ANYDAY</h6>
+            <p class="fw-medium mb-1 fs-5">$26</p>
+            <p class="text-muted  mb-1">Long Sleeve Utility Shirt, Navy, 6</p>
+            <div class="d-flex align-items-center justify-content-between gap-1 text-muted ">
+              <span>
+                <i class="bi bi-star-fill "></i> 4.8
+              </span>
+              <span>• 1,238 Sold</span>
+            </div>
+          </div>
+          <div class="product-card p-2 text-start">
+            <img src="./images/Frame 204.png" class="img-fluid rounded mb-2" alt="product">
+            <h6 class="fw-medium mb-0 fs-md-5">John Lewis ANYDAY</h6>
+            <p class="fw-medium mb-1 fs-5">$26</p>
+            <p class="text-muted  mb-1">Long Sleeve Utility Shirt, Navy, 6</p>
+            <div class="d-flex align-items-center justify-content-between gap-1 text-muted ">
+              <span>
+                <i class="bi bi-star-fill "></i> 4.8
+              </span>
+              <span>• 1,238 Sold</span>
+            </div>
+          </div>
+          <div class="product-card p-2 text-start">
+            <img src="./images/Frame 205.png" class="img-fluid rounded mb-2" alt="product">
+            <h6 class="fw-medium mb-0 fs-md-5">John Lewis ANYDAY</h6>
+            <p class="fw-medium mb-1 fs-5">$26</p>
+            <p class="text-muted  mb-1">Long Sleeve Utility Shirt, Navy, 6</p>
+            <div class="d-flex align-items-center justify-content-between gap-1 text-muted ">
+              <span>
+                <i class="bi bi-star-fill "></i> 4.8
+              </span>
+              <span>• 1,238 Sold</span>
+            </div>
+          </div>
+          <div class="product-card p-2 text-start">
+            <img src="./images/Frame 207.png" class="img-fluid rounded mb-2" alt="product">
+            <h6 class="fw-medium mb-0 fs-md-5">John Lewis ANYDAY</h6>
+            <p class="fw-medium mb-1 fs-5">$26</p>
+            <p class="text-muted  mb-1">Long Sleeve Utility Shirt, Navy, 6</p>
+            <div class="d-flex align-items-center justify-content-between gap-1 text-muted ">
+              <span>
+                <i class="bi bi-star-fill "></i> 4.8
+              </span>
+              <span>• 1,238 Sold</span>
+            </div>
+          </div>
+          <!-- Add more cards as needed -->
+        </div>
       </div>
 
-      <!-- Sign In -->
-      <a href="#" class="text-decoration-none text-dark d-flex align-items-center gap-1">
-        <i class="bi bi-person"></i> <span class="d-none d-md-inline">Sign in</span>
-      </a>
-
-      <!-- Wishlist -->
-      <a href="#" class="text-dark">
-        <i class="bi bi-heart fs-5"></i>
-      </a>
-
-      <!-- Cart -->
-      <a href="#" class="position-relative text-dark">
-        <i class="bi bi-bag fs-5"></i>
-        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark text-white" style="font-size: 0.6rem;">
-          0
-        </span>
-      </a>
     </div>
-  </div>
-</header>
+    <hr class="hr-dashed d-flex d-sm-none " />
 
-   </main>
-   <footer class="footer bg-light text-dark pt-5 pb-4">
-  <div class="container">
-    <div class="row gy-4 pb-md-5">
-      <!-- Logo and Newsletter -->
-      <div class="col-md-4">
-        <div class="md-w-75 ">
+    <section class="product-reviews container py-5">
+      <div class="product-review rounded p-4 my-md-5">
+        <h5 class="fw-bold mb-4">Product Reviews</h5>
+
+        <div class="d-flex flex-md-row flex-column flex-wrap align-items-start gap-4">
+
+          <!-- Average Rating -->
+          <div class="text-center rating-summary align-items-start pt-3">
+            <div class="rating-circle mb-2">
+              <div class="circle-progress">
+                <span class="rating-value fw-bold">4.5</span>
+              </div>
+            </div>
+            <div class="px-2">
+              <div class="d-flex justify-content-center align-items-center gap-1 mb-1">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </div>
+              <small class="text-muted">from 1,25k reviews</small>
+
+            </div>
+
+          </div>
+
+          <!-- Ratings Breakdown -->
+          <div class="flex-grow-1 widthauto">
+            <div class="rating-row d-flex align-items-center py-2" data-count="2823" data-total="2865">
+              <div class="rating-label">5.0 <i class="bi bi-star-fill "></i></div>
+              <div class="progress flex-grow-1">
+                <div class="progress-bar bg-dark" style="width: 98.5%"></div>
+              </div>
+              <div class="rating-count">2823</div>
+            </div>
+            <div class="rating-row d-flex align-items-center py-2" data-count="38" data-total="2865">
+              <div class="rating-label">4.0 <i class="bi bi-star-fill "></i></div>
+              <div class="progress flex-grow-1">
+                <div class="progress-bar bg-dark" style="width: 75%"></div>
+              </div>
+              <div class="rating-count">38</div>
+            </div>
+            <div class="rating-row d-flex align-items-center py-2" data-count="4" data-total="2865">
+              <div class="rating-label">3.0 <i class="bi bi-star-fill "></i></div>
+              <div class="progress flex-grow-1">
+                <div class="progress-bar bg-dark" style="width: 30%"></div>
+              </div>
+              <div class="rating-count">4</div>
+            </div>
+            <div class="rating-row d-flex align-items-center py-2" data-count="0" data-total="2865">
+              <div class="rating-label">2.0 <i class="bi bi-star-fill "></i></div>
+              <div class="progress flex-grow-1">
+                <div class="progress-bar bg-dark" style="width: 0%"></div>
+              </div>
+              <div class="rating-count">0</div>
+            </div>
+            <div class="rating-row d-flex align-items-center py-2" data-count="0" data-total="2865">
+              <div class="rating-label">1 . 0 <i class="bi bi-star-fill "></i></div>
+              <div class="progress flex-grow-1">
+                <div class="progress-bar bg-dark" style="width: 0%"></div>
+              </div>
+              <div class="rating-count">0</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+  </main>
+  <footer class="footer bg-light text-dark pt-5 pb-4">
+    <div class="container">
+      <div class="row gy-4 pb-md-5">
+        <!-- Logo and Newsletter -->
+        <div class="col-md-4">
+          <div class="md-w-75 ">
             <img src="./images/logo.png" alt="">
-        <div class="input-group mb-3 subscribe pt-4">
-          <input type="email" class="form-control " placeholder="Get latest offers to your inbox" />
-          <button class="btn btn-dark" type="button">
-            <img src="./images/arrow.png" alt="">
-          </button>
+            <div class="input-group mb-3 subscribe pt-4">
+              <input type="email" class="form-control " placeholder="Get latest offers to your inbox" />
+              <button class="btn btn-dark" type="button">
+                <img src="./images/arrow.png" alt="">
+              </button>
+            </div>
+            <div class="social-icons mt-3">
+              <a href="#"><img src="./images/face.png" alt="img"></a>
+              <a href="#"><img src="./images/insta.png" alt="img"></a>
+              <a href="#"><img src="./images/twiiter.png" alt="img"></a>
+              <a href="#"><img src="./images/IconBox.png" alt="img"></a>
+            </div>
+          </div>
+
         </div>
-        <div class="social-icons mt-3">
-          <a href="#"><img src="./images/face.png" alt="img"></a>
-          <a href="#"><img src="./images/insta.png" alt="img"></a>
-          <a href="#"><img src="./images/twiiter.png" alt="img"></a>
-          <a href="#"><img src="./images/IconBox.png" alt="img"></a>
-        </div>
-        </div>
-      
-      </div>
 
-      <!-- Shop -->
-      <div class="col-6 col-md-2">
-        <h6 >Shop</h6>
-        <ul class="list-unstyled">
-          <li><a href="#">My account</a></li>
-          <li><a href="#">Login</a></li>
-          <li><a href="#">Wishlist</a></li>
-          <li><a href="#">Cart</a></li>
-        </ul>
-      </div>
-
-      <!-- Information -->
-      <div class="col-6 col-md-3">
-        <h6 >Information</h6>
-        <ul class="list-unstyled">
-          <li><a href="#">Shipping Policy</a></li>
-          <li><a href="#">Returns & Refunds</a></li>
-          <li><a href="#">Cookies Policy</a></li>
-          <li><a href="#">Frequently asked</a></li>
-        </ul>
-      </div>
-
-      <!-- Company -->
-      <div class="col-md-3">
-        <h6 >Company</h6>
-        <ul class="list-unstyled">
-          <li><a href="#">About us</a></li>
-          <li><a href="#">Privacy Policy</a></li>
-          <li><a href="#">Terms & Conditions</a></li>
-          <li><a href="#">Contact Us</a></li>
-        </ul>
-      </div>
-    </div>
-
-<hr class="hr-dashed" />
-
-    <div class="loowerfoorer  small text-muted">
-      <p class="mb-0">© John Lewis plc 2001 - 2024</p>
-      <div class="d-flex gap-3 text-end ms-auto">
-        <div class="dropdown">
-          <button class="btn btn-link dropdown-toggle text-decoration-none text-muted p-0" type="button" data-bs-toggle="dropdown">
-            <img src="https://flagcdn.com/us.svg" width="20" class="me-1"> English
-          </button>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">English</a></li>
-            <li><a class="dropdown-item" href="#">Français</a></li>
+        <!-- Shop -->
+        <div class="col-6 col-md-2">
+          <h6>Shop</h6>
+          <ul class="list-unstyled">
+            <li><a href="#">My account</a></li>
+            <li><a href="#">Login</a></li>
+            <li><a href="#">Wishlist</a></li>
+            <li><a href="#">Cart</a></li>
           </ul>
         </div>
-        <div class="dropdown">
-          <button class="btn btn-link dropdown-toggle text-decoration-none text-muted p-0" type="button" data-bs-toggle="dropdown">
-            USD
-          </button>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">USD</a></li>
-            <li><a class="dropdown-item" href="#">EUR</a></li>
+
+        <!-- Information -->
+        <div class="col-6 col-md-3">
+          <h6>Information</h6>
+          <ul class="list-unstyled">
+            <li><a href="#">Shipping Policy</a></li>
+            <li><a href="#">Returns & Refunds</a></li>
+            <li><a href="#">Cookies Policy</a></li>
+            <li><a href="#">Frequently asked</a></li>
+          </ul>
+        </div>
+
+        <!-- Company -->
+        <div class="col-md-3">
+          <h6>Company</h6>
+          <ul class="list-unstyled">
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="#">Contact Us</a></li>
           </ul>
         </div>
       </div>
-    </div>
-  </div>
-</footer>
 
-    <script src="./package/bootstrap.bundle.min.js"></script>
-    <script src="./package/bootstrap.min.js"></script>
+      <hr class="hr-dashed" />
+
+      <div class="loowerfoorer  small text-muted">
+        <p class="mb-0">© John Lewis plc 2001 - 2024</p>
+        <div class="d-flex gap-3 text-end ms-auto">
+          <!-- Language Dropdown -->
+          <div class="custom-dropdown" data-selected="English">
+            <button class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+              <img src="https://flagcdn.com/us.svg" width="20" alt="English" />
+              <span>English</span>
+            </button>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="#" data-value="English" data-icon="https://flagcdn.com/us.svg">
+                  <img src="https://flagcdn.com/us.svg" width="20" /> English
+                </a>
+              </li>
+              <li>
+                <a href="#" data-value="Français" data-icon="https://flagcdn.com/fr.svg">
+                  <img src="https://flagcdn.com/fr.svg" width="20" /> Français
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Currency Dropdown -->
+          <div class="custom-dropdown" data-selected="USD">
+            <button class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+              <span>USD</span>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a href="#" data-value="USD">USD</a></li>
+              <li><a href="#" data-value="EUR">EUR</a></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./package/bootstrap.bundle.min.js"></script>
+  <script src="./package/bootstrap.min.js"></script>
+  <script src="./script.js"></script>
 </body>
+
 </html>
