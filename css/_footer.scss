@@ -33,7 +33,7 @@
       transition: color 0.3s;
 
       &:hover {
-        color: #000;
+        color: $black-color;
       }
     }
   }
@@ -61,3 +61,7 @@
     flex-wrap:wrap;
   }
 }
+html[dir="rtl"] {
+.arrow{
+ transform: rotate(-180deg);
+}}

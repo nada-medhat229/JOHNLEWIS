@@ -1,4 +1,10 @@
-document.querySelectorAll('.color-box').forEach(box => {
+  const topbar = document.getElementById('topbar-dropdowns');
+  if (document.documentElement.dir === 'rtl') {
+    topbar.classList.add('me-auto');
+  } else {
+    topbar.classList.add('ms-auto');
+  }
+  document.querySelectorAll('.color-box').forEach(box => {
   box.addEventListener('click', () => {
     // Remove active from all
     document.querySelectorAll('.color-box').forEach(el => el.classList.remove('active'));
@@ -63,6 +69,23 @@ document.addEventListener("DOMContentLoaded", () => {
         });
       });
     });
+document.querySelectorAll('.custom-dropdown .dropdown-menu a').forEach(link => {
+  link.addEventListener('click', function (e) {
+    // Optional: update the button content
+    const icon = this.querySelector('img').src;
+    const text = this.textContent.trim();
+    
+    const button = this.closest('.custom-dropdown').querySelector('.dropdown-toggle');
+    button.querySelector('img').src = icon;
+    button.querySelector('span').textContent = text;
+
+    // Go to the selected page
+    window.location.href = this.href;
+
+    // Prevent default only if you’re doing custom navigation (not needed here)
+    // e.preventDefault();
+  });
+});
 
     document.addEventListener("click", () => {
       document.querySelectorAll(".custom-dropdown").forEach(d => d.classList.remove("open"));

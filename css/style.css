@@ -17,6 +17,10 @@ a {
   font-weight: 500;
 }
 
+body, html {
+  overflow-x: hidden;
+}
+
 .bi-star-fill {
   color: #FFA439;
 }
@@ -107,7 +111,8 @@ a {
 
 .related-products .products-wrapper {
   display: grid;
-  gap: 1rem;
+  gap: 0.5rem;
+  grid-template-columns: repeat(2, 1fr);
   grid-template-columns: repeat(2, 1fr);
 }
 @media (min-width: 768px) {
@@ -115,7 +120,7 @@ a {
     grid-template-columns: repeat(3, 1fr);
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .related-products .products-wrapper {
     grid-template-columns: repeat(5, 1fr);
   }
@@ -174,6 +179,12 @@ a {
 .product-reviews .progress .progress-bar {
   transition: width 0.3s ease-in-out;
   border-radius: 10px;
+}
+
+html[dir=rtl] .breadcrumb-item + .breadcrumb-item::before {
+  float: right;
+  padding-left: var(--bs-breadcrumb-item-padding-x);
+  padding-right: var(--bs-breadcrumb-item-padding-x);
 }
 
 .custom-dropdown {
@@ -316,6 +327,10 @@ a {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+}
+
+html[dir=rtl] .arrow {
+  transform: rotate(-180deg);
 }
 
 @media (min-width: 1220px) {
