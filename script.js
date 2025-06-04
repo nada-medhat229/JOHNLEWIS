@@ -1,9 +1,3 @@
-  const topbar = document.getElementById('topbar-dropdowns');
-  if (document.documentElement.dir === 'rtl') {
-    topbar.classList.add('me-auto');
-  } else {
-    topbar.classList.add('ms-auto');
-  }
   document.querySelectorAll('.color-box').forEach(box => {
   box.addEventListener('click', () => {
     // Remove active from all
@@ -90,4 +84,26 @@ document.querySelectorAll('.custom-dropdown .dropdown-menu a').forEach(link => {
     document.addEventListener("click", () => {
       document.querySelectorAll(".custom-dropdown").forEach(d => d.classList.remove("open"));
     });
+  });
+  const thumbSwiper = new Swiper(".thumbSwiper", {
+    spaceBetween: 10,
+    slidesPerView: 5,
+    freeMode: true,
+    watchSlidesProgress: true,
+    breakpoints: {
+      0: { slidesPerView: 4 },
+      768: { slidesPerView: 5 }
+    }
+  });
+
+  const mainSwiper = new Swiper(".mainSwiper", {
+      spaceBetween: 10,
+  navigation: {
+    nextEl: ".swiper-button-net",
+    prevEl: ".swiper-button-pre"
+  },
+
+    thumbs: {
+      swiper: thumbSwiper,
+    },
   });

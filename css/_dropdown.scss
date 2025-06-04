@@ -37,7 +37,11 @@
     padding: 0.25rem 0;
     min-width: 140px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-
+    &.totop {
+    top: auto;
+    bottom: 100%;
+    margin-bottom: 4px;
+  }
     li {
       list-style: none;
 

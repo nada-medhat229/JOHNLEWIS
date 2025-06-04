@@ -19,7 +19,7 @@
     button {
       border-top-left-radius: 8px !important;
      border-bottom-left-radius: 8px !important;
-      border-radius: 8px;
+      border-radius: 8px !important;
       padding: 0 15px;
     }
   }
@@ -43,8 +43,14 @@
     li {
       margin-bottom: 0.5rem;
       a {
-        color: #555;
+        color: #141414;
         text-decoration: none;
+        font-weight: 400;
+         font-size: 14px;
+
+    @include minmedia(768) {
+  font-size: 16px;
+  }
         &:hover {
           text-decoration: underline;
         }

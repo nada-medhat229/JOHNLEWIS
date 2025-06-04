@@ -24,7 +24,33 @@ body, html {
 .bi-star-fill {
   color: $highlight-color;
 }
+.text-muted{
+  color: #8F8F8F;
+    font-size: 14px;
 
+    @include minmedia(768) {
+  font-size: 16px;
+  }
+}
+h2 {
+  font-size: 1.25rem; // ~fs-5
+
+  @include minmedia(768) {
+    font-size: 1.75rem; // ~fs-3
+  }
+}
+h6 {
+  font-size: 13px; 
+
+  @include minmedia(768) {
+    font-size: 1rem;
+  }
+}
+.swiper-button-prev:after, .swiper-rtl .swiper-button-next:after ,
+.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
+    content: "next";
+    display: none
+}
 .head {
   @include flex-center;
   background: $black-color;
@@ -34,6 +60,7 @@ body, html {
   p {
     text-align: center;
     font-size: 14px;
+
 
     span {
       border-radius: 20px;
@@ -48,6 +75,9 @@ body, html {
 .breadcrumb-item {
   a {
     color: $href;
+      font-size: 13px;
+ @include minmedia(768) {
+     font-size: 16px;  }
   }
 
   &.active {
@@ -55,10 +85,23 @@ body, html {
     font-weight: 500;
   }
 }
+.Description{
+  p{
+    color: $mute-color;
+     font-size: 14px;
 
+    @include minmedia(768) {
+  font-size: 16px;
+  }
+  }
+}
 .product-detail {
+  del{
+    color: $mute-color ;
+  }
   .img-main {
     height: 500px;
+    background-color: $white-color;
   }
 
   .thumb-img {
@@ -67,6 +110,8 @@ body, html {
     object-fit: cover;
     border-radius: 6px;
     cursor: pointer;
+    background-color: $white-color;
+
   }
 
   .color-box {
@@ -113,14 +158,20 @@ body, html {
     border-radius: 8px;
     color: $gray-color;
     cursor: pointer;
-
+    background: $white-color;
+    border: 1px solid #E6E6E6;
     &.active {
       color: $black-color;
       border-color: $black-color;
     }
   }
 }
-
+.bordercheck{
+  border: $borderline;
+    @include media(500) {
+  @include margin-inline-start(2rem);
+    }
+}
 .related-products {
   .products-wrapper {
     display: grid;
@@ -156,6 +207,18 @@ body, html {
     }
   }
 }
+.grid-buttons {
+  display: grid;
+
+  // Stack on mobile
+  grid-template-columns: 1fr;
+
+  // On medium and up, give Add to Cart more space
+  @include minmedia(768) {
+    grid-template-columns: 1.4fr 1fr; // 2:1 ratio
+  }
+}
+
 
 .product-reviews {
   .product-review {
@@ -199,14 +262,36 @@ body, html {
   }
 }
 
+html[dir="ltr"] {
+  .breadcrumb-item + .breadcrumb-item::before {
+    float: left;
+    padding-left: 0;
+    padding-right: var(--bs-breadcrumb-item-padding-x);
+  }
+  .breadcrumb-item+.breadcrumb-item {
+    padding-right: 0;
+}
+}
 html[dir="rtl"] {
   .breadcrumb-item + .breadcrumb-item::before {
     float: right;
     padding-left: var(--bs-breadcrumb-item-padding-x);
-    padding-right: var(--bs-breadcrumb-item-padding-x);
+    padding-right:0;
   }
+  .breadcrumb-item+.breadcrumb-item {
+    padding-left: 0;
+}
 }
 
 .custom-dropdown {
   @include dropdown-base;
+}
+[dir="ltr"] .end-0 {
+  right: 0 !important;
+  left: auto !important;
+}
+
+[dir="rtl"] .end-0 {
+  left: 0 !important;
+  right: auto !important;
 }

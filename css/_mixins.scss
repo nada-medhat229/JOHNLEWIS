@@ -27,3 +27,12 @@
     @content;
   }
 }
+@mixin margin-inline-start($value) {
+  [dir="ltr"] & {
+  margin-right: $value;
+  }
+  [dir="rtl"] & {
+   
+       margin-left: $value;
+  }
+}

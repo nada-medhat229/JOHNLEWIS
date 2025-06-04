@@ -25,6 +25,40 @@ body, html {
   color: #FFA439;
 }
 
+.text-muted {
+  color: #8F8F8F;
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  .text-muted {
+    font-size: 16px;
+  }
+}
+
+h2 {
+  font-size: 1.25rem;
+}
+@media (min-width: 768px) {
+  h2 {
+    font-size: 1.75rem;
+  }
+}
+
+h6 {
+  font-size: 13px;
+}
+@media (min-width: 768px) {
+  h6 {
+    font-size: 1rem;
+  }
+}
+
+.swiper-button-prev:after, .swiper-rtl .swiper-button-next:after,
+.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
+  content: "next";
+  display: none;
+}
+
 .head {
   display: flex;
   justify-content: center;
@@ -47,14 +81,34 @@ body, html {
 
 .breadcrumb-item a {
   color: #8F8F8F;
+  font-size: 13px;
+}
+@media (min-width: 768px) {
+  .breadcrumb-item a {
+    font-size: 16px;
+  }
 }
 .breadcrumb-item.active {
   color: #292929;
   font-weight: 500;
 }
 
+.Description p {
+  color: #666666;
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  .Description p {
+    font-size: 16px;
+  }
+}
+
+.product-detail del {
+  color: #666666;
+}
 .product-detail .img-main {
   height: 500px;
+  background-color: #fff;
 }
 .product-detail .thumb-img {
   width: 60px;
@@ -63,6 +117,7 @@ body, html {
      object-fit: cover;
   border-radius: 6px;
   cursor: pointer;
+  background-color: #fff;
 }
 .product-detail .color-box {
   width: 70px;
@@ -103,10 +158,24 @@ body, html {
   border-radius: 8px;
   color: #525252;
   cursor: pointer;
+  background: #fff;
+  border: 1px solid #E6E6E6;
 }
 .product-detail .size-box.active {
   color: #000;
   border-color: #000;
+}
+
+.bordercheck {
+  border: 1px solid #B8B8B8;
+}
+@media (max-width: 500px) {
+  [dir=ltr] .bordercheck {
+    margin-right: 2rem;
+  }
+  [dir=rtl] .bordercheck {
+    margin-left: 2rem;
+  }
 }
 
 .related-products .products-wrapper {
@@ -139,6 +208,16 @@ body, html {
 }
 .related-products .product-card .bi-star-fill {
   font-size: 14px;
+}
+
+.grid-buttons {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 768px) {
+  .grid-buttons {
+    grid-template-columns: 1.4fr 1fr;
+  }
 }
 
 .product-reviews .product-review {
@@ -181,10 +260,22 @@ body, html {
   border-radius: 10px;
 }
 
+html[dir=ltr] .breadcrumb-item + .breadcrumb-item::before {
+  float: left;
+  padding-left: 0;
+  padding-right: var(--bs-breadcrumb-item-padding-x);
+}
+html[dir=ltr] .breadcrumb-item + .breadcrumb-item {
+  padding-right: 0;
+}
+
 html[dir=rtl] .breadcrumb-item + .breadcrumb-item::before {
   float: right;
   padding-left: var(--bs-breadcrumb-item-padding-x);
-  padding-right: var(--bs-breadcrumb-item-padding-x);
+  padding-right: 0;
+}
+html[dir=rtl] .breadcrumb-item + .breadcrumb-item {
+  padding-left: 0;
 }
 
 .custom-dropdown {
@@ -223,6 +314,11 @@ html[dir=rtl] .breadcrumb-item + .breadcrumb-item::before {
   min-width: 140px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
+.custom-dropdown .dropdown-menu.totop {
+  top: auto;
+  bottom: 100%;
+  margin-bottom: 4px;
+}
 .custom-dropdown .dropdown-menu li {
   list-style: none;
 }
@@ -244,6 +340,16 @@ html[dir=rtl] .breadcrumb-item + .breadcrumb-item::before {
 }
 .custom-dropdown.open .dropdown-menu {
   display: block;
+}
+
+[dir=ltr] .end-0 {
+  right: 0 !important;
+  left: auto !important;
+}
+
+[dir=rtl] .end-0 {
+  left: 0 !important;
+  right: auto !important;
 }
 
 .responsive-header .header-logo {
@@ -293,7 +399,7 @@ html[dir=rtl] .breadcrumb-item + .breadcrumb-item::before {
 .footer .subscribe button {
   border-top-left-radius: 8px !important;
   border-bottom-left-radius: 8px !important;
-  border-radius: 8px;
+  border-radius: 8px !important;
   padding: 0 15px;
 }
 .footer .social-icons a {
@@ -313,8 +419,15 @@ html[dir=rtl] .breadcrumb-item + .breadcrumb-item::before {
   margin-bottom: 0.5rem;
 }
 .footer ul li a {
-  color: #555;
+  color: #141414;
   text-decoration: none;
+  font-weight: 400;
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  .footer ul li a {
+    font-size: 16px;
+  }
 }
 .footer ul li a:hover {
   text-decoration: underline;
@@ -334,8 +447,8 @@ html[dir=rtl] .arrow {
 }
 
 @media (min-width: 1220px) {
-  .md-w-75 {
-    width: 75%;
+  .md-w-60 {
+    width: 60%;
   }
 }
 @media (min-width: 750px) {

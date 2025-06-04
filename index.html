@@ -7,8 +7,10 @@
   <title>JOHNLEWIS</title>
   <link href="https://api.fontshare.com/v2/css?f[]=clash-grotesk@1&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./package/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.rtl.min.css" integrity="sha384-DOXMLfHhQkvFFp+rWTZwVlPVqdIhpDVYT9csOnHSgWQWPX0v5MCGtjCJbY6ERspU" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-
+  
+  <link rel="stylesheet" href="./package/swiper.css">
   <link rel="stylesheet" href="./css/style.css">
 </head>
 
@@ -53,8 +55,8 @@
         <!-- Cart -->
         <a href="#" class="position-relative text-dark">
           <img src="./images/cart.png" alt="cart" />
-          <span class="position-absolute top-0 start-100 translate-middle badge rounded-circle bg-dark text-white"
-            style="font-size: 0.6rem;">0</span>
+          <span class="position-absolute top-0 end-0 translate-middle badge rounded-circle bg-dark text-white"
+            style="font-size: 0.6rem;">1</span>
         </a>
 
         <!-- Menu Icon (Mobile Only) -->
@@ -82,9 +84,6 @@
   </header>
   <main class="container">
 
-
-
-
     <nav class="" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="#">Homepage</a></li>
@@ -93,182 +92,228 @@
         <li class="breadcrumb-item active" aria-current="page">Long Sleeve Overshirt, Khaki, 6</li>
       </ol>
     </nav>
-    <div class=" py-5 product-detail">
+    <div class=" py-4 product-detail">
       <div class="row gy-4 justify-content-around">
         <!-- Product Gallery -->
         <div class="col-md-6">
           <div class="position-relative text-center">
-            <img src="./images/image.png" alt="Main product" class="img-main">
-            <!-- Wishlist and Share -->
-            <div class="position-absolute top-0 end-0 d-flex flex-column gap-2 mt-2 me-2">
-              <button class="btn btn-light">
-                <img src="./images/share.png" alt="share" /></button>
-              <button class="btn btn-light"> <img src="./images/heart.png" alt="heart" /></button>
+            <!-- Main Swiper -->
+            <div class="swiper mainSwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="./images/image.png" alt="Main product" class="img-main">
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/image 19.png" alt="main" class="img-main">
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/image 20.png" alt="main2" class="img-main">
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/Frame 144.png" alt="main3" class="img-main">
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/Frame 143.png" alt="main4" class="img-main">
+                </div>
+              </div>
+            </div>
+
+           <!-- Wishlist, Share & Swiper Controls -->
+<div class="position-absolute top-0 end-0 h-100 d-flex flex-column justify-content-between align-items-center p-2 z-3">
+
+  <!-- Top: Wishlist and Share Buttons -->
+  <div class="d-flex flex-column gap-2">
+      <img src="./images/share.png" alt="Share" />
+      <img src="./images/heart.png" alt="Wishlist" />
+  </div>
+
+  <!-- Bottom: Swiper Navigation Buttons -->
+  <div class="d-flex flex-column gap-2">
+      <img src="./images/right.png" alt="Previous" class="swiper-button-pre" />
+      <img src="./images/left.png" alt="Next"  class="swiper-button-net" />
+  </div>
+
+</div>
+
+          </div>
+
+          <!-- Thumbnail Swiper -->
+          <div class="swiper thumbSwiper mt-3">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="./images/image.png" class="thumb-img" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/image 19.png" class="thumb-img" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/image 20.png" class="thumb-img" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/Frame 144.png" class="thumb-img" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/Frame 143.png" class="thumb-img" />
+              </div>
             </div>
           </div>
-          <!-- Thumbnail Gallery -->
-          <div class="d-flex justify-content-between mt-3 gap-2 overflow-auto">
-            <img src="./images/Frame139.png" class="thumb-img">
-            <img src="./images/image 19.png" class="thumb-img">
-            <img src="./images/image 20.png" class="thumb-img">
-            <img src="./images/Frame 144.png" class="thumb-img">
-            <img src="./images/Frame 143.png" class="thumb-img">
-          </div>
         </div>
+
 
         <!-- Product Info -->
         <div class="col-md-5 ">
           <p class="text-muted mb-1">John Lewis ANYDAY</p>
-          <h4 class="fw-semibold">Long Sleeve Overshirt, Khaki, 6</h4>
+          <h2 class="fw-semibold fs-5 fs-md-3">Long Sleeve Overshirt, Khaki, 6</h4>
 
-          <!-- Pricing and Rating -->
-          <div class="d-flex align-items-center justify-content-between gap-3 mb-md-5 mb-1">
-            <div>
-              <del class="text-muted">£40.00</del>
-              <span class="fw-bold fs-5 text-dark">£28.00</span>
+            <!-- Pricing and Rating -->
+            <div class="d-flex align-items-center justify-content-between gap-3 mb-md-3 mb-1">
+              <div>
+                <del class="fs-6 fs-md-4">£40.00</del>
+                <span class="fw-bold fs-6 fs-md-3 text-dark">£28.00</span>
+              </div>
+              <div>
+                <span class="text-muted fs-6 fs-md-4">1,238 Sold</span>
+                <span class="fw-bold fs-6 fs-md-3 ps-3"><i class="bi bi-star-fill"></i> 4.5</span>
+
+              </div>
             </div>
-            <div>
-              <span class="text-muted">1,238 Sold</span>
-              <span class=""><i class="bi bi-star-fill "></i> 4.5</span>
+            <hr class="hr-dashed d-flex " />
 
-            </div>
-          </div>
-    <hr class="hr-dashed d-flex d-sm-none " />
+            <!-- Description -->
 
-          <!-- Description -->
-
-          <div class="mb-md-5 mb-1">
-            <h5 class="fw-semibold">Description:</h4>
-              <p class="text-muted">
+            <div class="mb-md-4 mb-1 Description">
+              <h4 class="fw-semibold">Description:</h4>
+              <p class="">
                 Boba etiam ut bulla tea est potus dilectus singulari compositione saporum et textuum, quae in Taiwan
                 annis 1980 orta sunt. Boba refert ad pilas masticas tapiocas in fundo potus inventas, quae typice lacte
                 tea nigro sapiuntur. Boba phaenomenon.
-                <a href="#" class="fw-semibold text-black fs-6">See More...</a>
+                <a href="#" class="fw-medium text-black fs-6">See More...</a>
               </p>
-          </div>
-
-          <!-- Color -->
-          <div class="mb-md-3 mb-1">
-            <p class="mb-md-3 mb-1 fw-semibold text-muted">
-              Color: <span class="text-black selected-color">Royal Brown</span>
-            </p>
-            <div class="d-flex gap-2">
-              <div class="color-box active" data-color="Royal Brown">
-                <span class="color-inner bg-brown "></span>
-              </div>
-              <div class="color-box" data-color="White Sand">
-                <span class="color-inner bg-light"></span>
-              </div>
-              <div class="color-box" data-color="Ocean Blue">
-                <span class="color-inner bg-semiblue"></span>
-              </div>
-              <div class="color-box" data-color="Jet Black">
-                <span class="color-inner bg-dark"></span>
-              </div>
             </div>
-          </div>
 
-
-          <!-- Sizes -->
-          <div class="mb-md-3 mb-1">
-            <div class="d-flex justify-content-between">
-              <p class="mb-md-3 fw-semibold text-muted">
-                Size: <span class="text-black selected-size">8</span>
+            <!-- Color -->
+            <div class="mb-md-4 mb-1">
+              <p class="mb-md-3 mb-1 fw-medium text-muted fs-6 fs-md-5">
+                Color: <span class="text-black fw-semibold selected-color">Royal Brown</span>
               </p>
-              <a href="#" class="ms-3 small fw-semibold text-black link-offset-2 text-decoration-underline">
-                View Size Chart
-              </a>
+              <div class="d-flex gap-2">
+                <div class="color-box active" data-color="Royal Brown">
+                  <span class="color-inner bg-brown "></span>
+                </div>
+                <div class="color-box" data-color="White Sand">
+                  <span class="color-inner bg-light"></span>
+                </div>
+                <div class="color-box" data-color="Ocean Blue">
+                  <span class="color-inner bg-semiblue"></span>
+                </div>
+                <div class="color-box" data-color="Jet Black">
+                  <span class="color-inner bg-dark"></span>
+                </div>
+              </div>
             </div>
 
-            <div class="d-flex gap-2 flex-wrap">
-              <button class="btn fw-semibold size-box" data-size="6">6</button>
-              <button class="btn fw-semibold size-box active" data-size="8">8</button>
-              <button class="btn fw-semibold size-box" data-size="10">10</button>
-              <button class="btn fw-semibold size-box" data-size="14">14</button>
-              <button class="btn fw-semibold size-box" data-size="18">18</button>
-              <button class="btn fw-semibold size-box" data-size="20">20</button>
+
+            <!-- Sizes -->
+            <div class="mb-md-4 mb-1">
+              <div class="d-flex justify-content-between">
+                <p class="mb-md-3 fw-medium text-muted fs-6 fs-md-5">
+                  Size: <span class="text-black fw-semibold selected-size">8</span>
+                </p>
+                <a href="#" class="ms-3 small fw-semibold text-black link-offset-2 text-decoration-underline">
+                  View Size Chart
+                </a>
+              </div>
+
+              <div class="d-flex gap-2 flex-wrap">
+                <button class="btn fw-semibold size-box" data-size="6">6</button>
+                <button class="btn fw-semibold size-box active" data-size="8">8</button>
+                <button class="btn fw-semibold size-box" data-size="10">10</button>
+                <button class="btn fw-semibold size-box" data-size="14">14</button>
+                <button class="btn fw-semibold size-box" data-size="18">18</button>
+                <button class="btn fw-semibold size-box" data-size="20">20</button>
+              </div>
             </div>
-          </div>
+
+            <!-- Buttons -->
+            <div class="d-grid gap-2 gap-md-3 mb-md-3 mb-1 grid-buttons">
+              <button class="btn btn-dark py-2 fs-4 fw-semibold">Add To Cart</button>
+              <button class="btn py-2 fs-5 bordercheck fw-medium">Checkout Now</button>
+            </div>
 
 
-          <!-- Buttons -->
-          <div class="d-flex flex-column flex-md-row gap-2 mb-md-3 mb-1">
-            <button class="btn btn-dark w-100 py-2 fs-5">Add To Cart</button>
-            <button class="btn btn-outline-dark w-100 py-2 fs-5">Checkout Now</button>
-          </div>
 
-          <a href="#" class="small text-muted text-decoration-underline">Delivery T&C</a>
+            <a href="#" class="small text-muted text-decoration-underline">Delivery T&C</a>
         </div>
       </div>
     </div>
 
-    <hr class="hr-dashed d-flex d-sm-none " />
+    <hr class="hr-dashed d-flex " />
 
     <!-- related-products -->
     <div class="related-products py-5">
       <div class="">
-        <div class="d-flex justify-content-between align-items-center mb-4">
+        <div class="d-flex justify-content-between align-items-center ">
           <h4 class="fw-semibold">Related Product</h4>
           <a href="#" class="text-decoration-underline text-black ">View All</a>
         </div>
 
         <div class=" products-wrapper ">
           <!-- Product Card -->
-          <div class="product-card p-2 text-start">
+          <div class="product-card p-2 ">
             <img src="./images/Frame 203.png" class="img-fluid rounded mb-2" alt="product">
-            <h6 class="fw-medium mb-0 fs-md-5">John Lewis ANYDAY</h6>
-            <p class="fw-medium mb-1  fs-5">$26</p>
+            <h6 class="fw-semibold mb-0">John Lewis ANYDAY</h6>
+            <p class="fw-medium mb-1 fs-6 fs-md-5">$26</p>
             <p class="text-muted  mb-1">Wide Leg Cropped Jeans, Denim</p>
             <div class="d-flex align-items-center justify-content-between gap-1 text-muted ">
-              <span>
+              <span class="fw-medium text-black">
                 <i class="bi bi-star-fill"></i> 4.8
               </span>
               <span>• 1,238 Sold</span>
             </div>
           </div>
-          <div class="product-card p-2 text-start">
+          <div class="product-card p-2 ">
             <img src="./images/Frame 202.png" class="img-fluid rounded mb-2" alt="product">
-            <h6 class="fw-medium mb-0 fs-md-5">John Lewis ANYDAY</h6>
-            <p class="fw-medium mb-1 fs-5">$26</p>
+            <h6 class="fw-semibold mb-0">John Lewis ANYDAY</h6>
+            <p class="fw-medium mb-1 fs-6 fs-md-5">$26</p>
             <p class="text-muted  mb-1">Long Sleeve Utility Shirt, Navy, 6</p>
             <div class="d-flex align-items-center justify-content-between gap-1 text-muted ">
-              <span>
+              <span class="fw-medium text-black">
                 <i class="bi bi-star-fill "></i> 4.8
               </span>
               <span>• 1,238 Sold</span>
             </div>
           </div>
-          <div class="product-card p-2 text-start">
+          <div class="product-card p-2 ">
             <img src="./images/Frame 204.png" class="img-fluid rounded mb-2" alt="product">
-            <h6 class="fw-medium mb-0 fs-md-5">John Lewis ANYDAY</h6>
-            <p class="fw-medium mb-1 fs-5">$26</p>
+            <h6 class="fw-semibold mb-0">John Lewis ANYDAY</h6>
+            <p class="fw-medium mb-1 fs-6 fs-md-5">$26</p>
             <p class="text-muted  mb-1">Long Sleeve Utility Shirt, Navy, 6</p>
             <div class="d-flex align-items-center justify-content-between gap-1 text-muted ">
-              <span>
+              <span class="fw-medium text-black">
                 <i class="bi bi-star-fill "></i> 4.8
               </span>
               <span>• 1,238 Sold</span>
             </div>
           </div>
-          <div class="product-card p-2 text-start">
+          <div class="product-card p-2 ">
             <img src="./images/Frame 205.png" class="img-fluid rounded mb-2" alt="product">
-            <h6 class="fw-medium mb-0 fs-md-5">John Lewis ANYDAY</h6>
-            <p class="fw-medium mb-1 fs-5">$26</p>
+            <h6 class="fw-semibold mb-0">John Lewis ANYDAY</h6>
+            <p class="fw-medium mb-1 fs-6 fs-md-5">$26</p>
             <p class="text-muted  mb-1">Long Sleeve Utility Shirt, Navy, 6</p>
             <div class="d-flex align-items-center justify-content-between gap-1 text-muted ">
-              <span>
+              <span class="fw-medium text-black">
                 <i class="bi bi-star-fill "></i> 4.8
               </span>
               <span>• 1,238 Sold</span>
             </div>
           </div>
-          <div class="product-card p-2 text-start">
+          <div class="product-card p-2 ">
             <img src="./images/Frame 207.png" class="img-fluid rounded mb-2" alt="product">
-            <h6 class="fw-medium mb-0 fs-md-5">John Lewis ANYDAY</h6>
-            <p class="fw-medium mb-1 fs-5">$26</p>
+            <h6 class="fw-semibold mb-0">John Lewis ANYDAY</h6>
+            <p class="fw-medium mb-1 fs-6 fs-md-5">$26</p>
             <p class="text-muted  mb-1">Long Sleeve Utility Shirt, Navy, 6</p>
             <div class="d-flex align-items-center justify-content-between gap-1 text-muted ">
-              <span>
+              <span class="fw-medium text-black">
                 <i class="bi bi-star-fill "></i> 4.8
               </span>
               <span>• 1,238 Sold</span>
@@ -279,11 +324,13 @@
       </div>
 
     </div>
-    <hr class="hr-dashed d-flex d-sm-none " />
+    <hr class="hr-dashed d-flex  " />
 
     <section class="product-reviews  py-5">
-      <div class="product-review rounded p-4 my-md-5">
-        <h5 class="fw-bold mb-4">Product Reviews</h5>
+
+        <h4 class="fw-semibold mb-4">Product Reviews</h5>
+
+      <div class="product-review rounded p-4 mb-md-5">
 
         <div class="d-flex flex-md-row flex-column flex-wrap align-items-start gap-4">
 
@@ -313,35 +360,35 @@
             <div class="rating-row d-flex align-items-center py-2" data-count="2823" data-total="2865">
               <div class="rating-label">5.0 <i class="bi bi-star-fill "></i></div>
               <div class="progress flex-grow-1">
-                <div class="progress-bar bg-dark" style="width: 98.5%"></div>
+                <div class="progress-bar bg-dark ms-2" style="width: 98.5%"></div>
               </div>
               <div class="rating-count">2823</div>
             </div>
             <div class="rating-row d-flex align-items-center py-2" data-count="38" data-total="2865">
               <div class="rating-label">4.0 <i class="bi bi-star-fill "></i></div>
               <div class="progress flex-grow-1">
-                <div class="progress-bar bg-dark" style="width: 75%"></div>
+                <div class="progress-bar bg-dark ms-2" style="width: 75%"></div>
               </div>
               <div class="rating-count">38</div>
             </div>
             <div class="rating-row d-flex align-items-center py-2" data-count="4" data-total="2865">
               <div class="rating-label">3.0 <i class="bi bi-star-fill "></i></div>
               <div class="progress flex-grow-1">
-                <div class="progress-bar bg-dark" style="width: 30%"></div>
+                <div class="progress-bar bg-dark ms-2" style="width: 30%"></div>
               </div>
               <div class="rating-count">4</div>
             </div>
             <div class="rating-row d-flex align-items-center py-2" data-count="0" data-total="2865">
               <div class="rating-label">2.0 <i class="bi bi-star-fill "></i></div>
               <div class="progress flex-grow-1">
-                <div class="progress-bar bg-dark" style="width: 0%"></div>
+                <div class="progress-bar bg-dark ms-2" style="width: 0%"></div>
               </div>
               <div class="rating-count">0</div>
             </div>
             <div class="rating-row d-flex align-items-center py-2" data-count="0" data-total="2865">
               <div class="rating-label">1 . 0 <i class="bi bi-star-fill "></i></div>
               <div class="progress flex-grow-1">
-                <div class="progress-bar bg-dark" style="width: 0%"></div>
+                <div class="progress-bar bg-dark ms-2" style="width: 0%"></div>
               </div>
               <div class="rating-count">0</div>
             </div>
@@ -357,10 +404,10 @@
     <div class="container">
       <div class="row gy-4 pb-md-5">
         <!-- Logo and Newsletter -->
-        <div class="col-md-4">
-          <div class="md-w-75 ">
-            <img src="./images/logo.png" alt="">
-            <div class="input-group mb-3 subscribe pt-4">
+        <div class="col-md-6">
+          <div class="md-w-60 ">
+            <img src="./images/logo.png" alt="logo" class="">
+            <div class="input-group mb-3 subscribe pt-4 mb-4">
               <input type="email" class="form-control " placeholder="Get latest offers to your inbox" />
               <button class="btn btn-dark" type="button">
                 <img src="./images/arrow.png" alt="arrow" class="arrow">
@@ -378,7 +425,7 @@
 
         <!-- Shop -->
         <div class="col-6 col-md-2">
-          <h6>Shop</h6>
+          <h6 class="fw-semibold">Shop</h6>
           <ul class="list-unstyled">
             <li><a href="#">My account</a></li>
             <li><a href="#">Login</a></li>
@@ -388,8 +435,8 @@
         </div>
 
         <!-- Information -->
-        <div class="col-6 col-md-3">
-          <h6>Information</h6>
+        <div class="col-6 col-md-2">
+          <h6 class="fw-semibold">Information</h6>
           <ul class="list-unstyled">
             <li><a href="#">Shipping Policy</a></li>
             <li><a href="#">Returns & Refunds</a></li>
@@ -399,8 +446,8 @@
         </div>
 
         <!-- Company -->
-        <div class="col-md-3">
-          <h6>Company</h6>
+        <div class="col-md-2">
+          <h6 class="fw-semibold">Company</h6>
           <ul class="list-unstyled">
             <li><a href="#">About us</a></li>
             <li><a href="#">Privacy Policy</a></li>
@@ -414,14 +461,14 @@
 
       <div class="loowerfoorer  small text-muted">
         <p class="mb-0">© John Lewis plc 2001 - 2024</p>
-        <div class="d-flex gap-3" id="topbar-dropdowns">
+        <div class="d-flex gap-3 ms-0 me-auto" id="topbar-dropdowns">
           <!-- Language Dropdown -->
           <div class="custom-dropdown" data-selected="English">
             <button class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">
               <img src="https://flagcdn.com/us.svg" width="20" alt="English" />
               <span>English</span>
             </button>
-            <ul class="dropdown-menu">
+            <ul class="dropdown-menu totop">
               <li>
                 <a href="./index.html" data-value="English" data-icon="https://flagcdn.com/us.svg">
                   <img src="https://flagcdn.com/us.svg" width="20" /> English
@@ -440,7 +487,7 @@
             <button class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">
               <span>USD</span>
             </button>
-            <ul class="dropdown-menu">
+            <ul class="dropdown-menu totop">
               <li><a href="#" data-value="USD">USD</a></li>
               <li><a href="#" data-value="EUR">EUR</a></li>
             </ul>
@@ -453,6 +500,7 @@
 
   <script src="./package/bootstrap.bundle.min.js"></script>
   <script src="./package/bootstrap.min.js"></script>
+  <script src="./package/swiper.js"></script>
   <script src="./script.js"></script>
 </body>
 
