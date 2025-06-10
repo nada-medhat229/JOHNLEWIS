@@ -115,13 +115,15 @@ h6 {
   .img-main {
     height: 500px;
   }
-
+  .itemisactive{
+    &.swiper-slide-active {
+      background-color: #F2F2F2;
+      width: 88% !important;
+    }
+  }
   .swiper-slide {
     background-color: #F2F2F2;
     text-align: center;
-    &.swiper-slide-active {
-      background-color: #F2F2F2;
-    }
   }
 
 
