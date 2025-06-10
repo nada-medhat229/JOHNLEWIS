@@ -172,6 +172,7 @@ h6 {
 .product-detail .size-box.active {
   color: #000;
   border-color: #000;
+  background: #EBEBEB;
 }
 
 .bordercheck {
