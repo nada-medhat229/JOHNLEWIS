@@ -100,9 +100,11 @@ h6 {
   p {
     color: $mute-color;
     font-size: 14px;
+      line-height: 1.6;
 
     @include minmedia(768) {
       font-size: 16px;
+      line-height: 1.9;
     }
   }
 }
@@ -113,17 +115,20 @@ h6 {
   }
 
   .img-main {
-    height: 500px;
+    height: 600px;
   }
   .itemisactive{
     &.swiper-slide-active {
       background-color: #F2F2F2;
-      width: 88% !important;
+      width: 82% !important;
+      border-radius: 8px;
     }
   }
-  .swiper-slide {
+  .thumbSwiper .swiper-slide {
     background-color: #F2F2F2;
     text-align: center;
+      border-radius: 8px;
+
   }
 
 
