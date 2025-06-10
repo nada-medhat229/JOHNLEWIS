@@ -17,7 +17,8 @@ a {
   font-weight: 500;
 }
 
-body, html {
+body,
+html {
   overflow-x: hidden;
 }
 
@@ -53,8 +54,10 @@ h6 {
   }
 }
 
-.swiper-button-prev:after, .swiper-rtl .swiper-button-next:after,
-.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after,
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after {
   content: "next";
   display: none;
 }
@@ -108,6 +111,12 @@ h6 {
 }
 .product-detail .img-main {
   height: 500px;
+}
+.product-detail .swiper-slide {
+  background-color: #fff;
+  text-align: center;
+}
+.product-detail .swiper-slide.swiper-slide-active {
   background-color: #fff;
 }
 .product-detail .thumb-img {
@@ -117,7 +126,6 @@ h6 {
      object-fit: cover;
   border-radius: 6px;
   cursor: pointer;
-  background-color: #fff;
 }
 .product-detail .color-box {
   width: 70px;
@@ -253,7 +261,7 @@ h6 {
   background-color: #e9ecef;
   border-radius: 10px;
   height: 10px;
-  margin: 0 5px;
+  margin: 0 15px;
 }
 .product-reviews .progress .progress-bar {
   transition: width 0.3s ease-in-out;
